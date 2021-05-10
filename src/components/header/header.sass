@@ -1,0 +1,96 @@
+.header
+    z-index: 2
+    &__main
+        background-color: $white
+        color: $black
+        height: 70px
+        width: 100%
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3)
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+        +mq('xs')
+            height: 60px
+    &__logo
+        margin-left: 20px
+        font-size: 22px
+        font-family: $main-font
+    &__center
+        list-style: none
+        display: flex
+        padding: 0
+        margin: 0
+        height: 100%
+        +mq('sm')
+            display: none
+    &__center-element
+        padding-right: 70px
+        cursor: pointer
+        height: 100%
+        display: flex
+        align-items: center
+        &_attention
+            color: #d84b4b
+        &_main
+            font-weight: 600
+        &:last-child
+            padding-right: 0
+        &_hover
+            z-index: 2
+            animation: dissolution 0.7s ease-in-out forwards
+    &__right
+        display: flex
+        flex-direction: row
+        margin-right: 30px
+        align-items: center
+        +mq('xs')
+            align-items: baseline
+    &__right-element
+        margin-right: 20px
+        display: flex
+        align-items: center
+        cursor: pointer
+        &:last-child
+            margin-right: 0
+        &_cart
+            position: relative
+    &__search
+        height: 20px
+        width: 150px
+        border-radius: 13px
+        background: 95% 50% / 9% no-repeat url("data:image/svg+xml;utf8,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22iso-8859-1%22%3F%3E%0A%3C!--%20Generator%3A%20Adobe%20Illustrator%2019.0.0%2C%20SVG%20Export%20Plug-In%20.%20SVG%20Version%3A%206.00%20Build%200)%20%20--%3E%0A%3Csvg%20version%3D%221.1%22%20id%3D%22Capa_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%0A%09%20viewBox%3D%220%200%2053.627%2053.627%22%20style%3D%22enable-background%3Anew%200%200%2053.627%2053.627%3B%22%20xml%3Aspace%3D%22preserve%22%3E%0A%3Cpath%20d%3D%22M53.627%2C49.385L37.795%2C33.553C40.423%2C30.046%2C42%2C25.709%2C42%2C21C42%2C9.42%2C32.58%2C0%2C21%2C0S0%2C9.42%2C0%2C21s9.42%2C21%2C21%2C21%0A%09c4.709%2C0%2C9.046-1.577%2C12.553-4.205l15.832%2C15.832L53.627%2C49.385z%20M2%2C21C2%2C10.523%2C10.523%2C2%2C21%2C2s19%2C8.523%2C19%2C19s-8.523%2C19-19%2C19%0A%09S2%2C31.477%2C2%2C21z%20M35.567%2C36.093c0.178-0.172%2C0.353-0.347%2C0.525-0.525c0.146-0.151%2C0.304-0.29%2C0.445-0.445l14.262%2C14.262%0A%09l-1.415%2C1.415L35.123%2C36.537C35.278%2C36.396%2C35.416%2C36.238%2C35.567%2C36.093z%22%2F%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3C%2Fsvg%3E")
+        text-indent: 10px
+        border: 1px solid #5b5b5e
+        +mq('sm')
+            display: none
+        &:focus, &:active
+            outline: none
+    &__total-count
+        right: -6px
+        top: -6px
+        width: 16px
+        height: 16px
+        display: flex
+        justify-content: center
+        align-items: center
+        font-size: 12px
+        position: absolute
+        background-color: #e76767
+        color: $white
+        border-radius: 7px
+    &__sidebar
+        display: none
+        margin-left: 20px
+        cursor: pointer
+        +mq('sm')
+            display: block
+    &__sidebar-icon
+        width: 20px
+        height: 20px
+
+@keyframes dissolution
+    0%
+        transform: translateY(0px)
+    100%
+        transform: translateY(70px)

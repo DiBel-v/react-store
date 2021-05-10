@@ -1,0 +1,58 @@
+.drop-navigation
+    position: absolute
+    top: 70px
+    height: 250px
+    width: 100%
+    background-color: #f2e9cd
+    opacity: 0.9
+    animation: appear 0.5s ease-in-out forwards
+    display: grid
+    grid-template-columns: 1fr 150px 160px 150px 1fr
+    gap: 15px
+    z-index: 1
+    &__list
+        display: flex
+        flex-direction: column
+        list-style: none
+        padding: 70px 0 0
+        margin: 0
+        font-size: 16px
+        justify-self: flex-start
+        &_shoes
+            margin-left: 20px
+        &_accessories
+            margin-left: 7px
+        &_clothes
+            margin-left: 24px
+    &__list-item
+        padding: 8px 0
+        cursor: pointer
+        color: #7c7977
+        text-decoration: none
+        animation: manifestation 1s ease-in-out forwards
+        &:hover
+            color: #c7a896
+            text-decoration: underline
+    &__image-container
+        height: 100%
+        text-align: left
+        &:last-child
+            justify-self: flex-end
+    &__image
+        animation: appear 0.5s ease-in-out forwards
+        width: auto
+        +mq('md')
+            display: none
+
+
+@keyframes appear
+    0%
+        height: 0px
+    100%
+        height: 250px
+
+@keyframes manifestation
+    0%
+        opacity: 0
+    100%
+        opacity: 1

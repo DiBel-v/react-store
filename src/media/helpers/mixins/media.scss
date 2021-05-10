@@ -1,0 +1,12 @@
+@mixin mq($mq-breakpoint, $mq-breakpoints: $breakpoints) {
+    $mq-media-query: '';
+    
+    @if map-has-key($mq-breakpoints, $mq-breakpoint) {
+        $mq-breakpoint: map-get($mq-breakpoints, $mq-breakpoint);
+    }
+    $mq-media-query: "(max-width: #{$mq-breakpoint})";
+
+    @media #{$mq-media-query} {
+        @content;
+    }
+}

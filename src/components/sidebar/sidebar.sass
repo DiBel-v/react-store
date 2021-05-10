@@ -1,0 +1,50 @@
+.sidebar
+    position: fixed
+    width: 100%
+    height: calc(100% - 59px)
+    top: 59px
+    z-index: 1
+    background-color: $white
+    &__list
+        position: absolute
+        padding: 0
+        margin: 0
+        top: 45%
+        left: 55%
+        transform: translate(-55%, -45%)
+        list-style: none
+    &__item
+        cursor: pointer
+        padding: 20px 0
+        font-size: 35px
+        font-family: $main-font
+        +userSelect
+        &_sale
+            color: #e47b7b
+        +mq('xs')
+            font-size: 30px
+            padding: 10px 0
+    &__sub-list
+        padding: 0
+        margin: 20px 0 0 40px
+        display: flex
+        flex-direction: column
+        animation: drop 1s ease-in-out forwards
+        overflow: hidden
+        +mq('xs')
+            margin: 10px 0 0 20px
+    &__sub-list-item
+        text-decoration: dotted
+        margin-top: 10px
+        color: #79e2b3
+        font-size: 30px
+        +mq('xs')
+            font-size: 26px
+
+@keyframes drop
+    from
+        height: 0
+        opacity: 0
+    to
+        height: 200px
+        opacity: 1

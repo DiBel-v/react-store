@@ -1,0 +1,17 @@
+.loader
+    height: 500px
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: center
+    &__icon
+        animation-name: spin
+        animation-duration: 3s
+        animation-iteration-count: infinite
+
+
+@keyframes spin
+    from
+        transform: rotate(0deg)
+    to
+        transform: rotate(360deg)
